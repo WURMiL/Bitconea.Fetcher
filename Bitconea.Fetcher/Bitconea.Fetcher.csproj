@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Marek</Authors>
+    <Company>Bitconea</Company>
+    <Product>HTTP(s) Fetcher</Product>
+    <Description>REST API client library for mass requests</Description>
+    <PackageTags>rest, api, client</PackageTags>
+    <NeutralLanguage>en-150</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>
