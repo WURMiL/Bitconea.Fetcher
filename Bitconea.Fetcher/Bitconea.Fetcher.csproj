@@ -1,14 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Marek</Authors>
     <Company>Bitconea</Company>
-    <Product>HTTP(s) Fetcher</Product>
-    <Description>REST API client library for mass requests</Description>
+    <Product>Bitconea Fetcher</Product>
+    <Description>REST API client for mass requests</Description>
     <PackageTags>rest, api, client</PackageTags>
     <NeutralLanguage>en-150</NeutralLanguage>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>initial version</PackageReleaseNotes>
+    <VersionPrefix>1.0.1</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>

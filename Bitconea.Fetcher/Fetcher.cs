@@ -52,7 +52,7 @@ namespace Bitconea.Fetcher
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            Console.WriteLine($"{DateTime.Now.ToLongTimeString()}, {DateTime.Now.Millisecond}: Start fetching from {_fetcherJob.Uri.OriginalString}");
+            //Console.WriteLine($"{DateTime.Now.ToLongTimeString()}, {DateTime.Now.Millisecond}: Start fetching from {_fetcherJob.Uri.OriginalString}");
             var jobResponse = new FetcherJobResponse();
 
             _httpClient.DefaultRequestHeaders.Clear();
@@ -106,7 +106,7 @@ namespace Bitconea.Fetcher
                     else
                     {
                         //jobResponse.IsJson = message.Content.Headers.ContentType?.MediaType == "application/json" && jobResponse.JToken != null;
-                        Console.WriteLine($"{DateTime.Now.ToLongTimeString()}, {DateTime.Now.Millisecond}: SUCCESS response from from {_fetcherJob.Uri.AbsoluteUri}");
+                        //Console.WriteLine($"{DateTime.Now.ToLongTimeString()}, {DateTime.Now.Millisecond}: SUCCESS response from from {_fetcherJob.Uri.AbsoluteUri}");
                         jobResponse.IsSuccessfull = true;
                     }
                 }
@@ -120,7 +120,7 @@ namespace Bitconea.Fetcher
             {
                 jobResponse.Exception = ex.InnerException?.InnerException ?? ex.InnerException ?? ex;
                 jobResponse.IsSuccessfull = false;
-                Console.WriteLine($"{DateTime.Now.ToLongTimeString()}, {DateTime.Now.Millisecond}: [{_fetcherJob.Uri.AbsoluteUri}] {(ex.InnerException?.InnerException ?? ex.InnerException ?? ex).Message}");
+                //Console.WriteLine($"{DateTime.Now.ToLongTimeString()}, {DateTime.Now.Millisecond}: [{_fetcherJob.Uri.AbsoluteUri}] {(ex.InnerException?.InnerException ?? ex.InnerException ?? ex).Message}");
             }
             finally
             {
